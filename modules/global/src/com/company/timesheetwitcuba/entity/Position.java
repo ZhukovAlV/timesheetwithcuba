@@ -18,7 +18,7 @@ public class Position extends StandardEntity {
     @Column(name = "NAME")
     private String name;
 
-    @OneToMany(mappedBy = "user")
+    @OneToMany(mappedBy = "position")
     private List<User> user;
 
     public List<User> getUser() {

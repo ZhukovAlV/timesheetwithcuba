@@ -18,30 +18,6 @@ public class Department extends StandardEntity {
     @JoinColumn(name = "ORGANIZATION_ID")
     private Organization organization;
 
-    @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "BOSS_ID")
-    private User boss;
-
-    @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "PERFORMER_ID")
-    private User performer;
-
-    public User getPerformer() {
-        return performer;
-    }
-
-    public void setPerformer(User performer) {
-        this.performer = performer;
-    }
-
-    public User getBoss() {
-        return boss;
-    }
-
-    public void setBoss(User boss) {
-        this.boss = boss;
-    }
-
     public Organization getOrganization() {
         return organization;
     }

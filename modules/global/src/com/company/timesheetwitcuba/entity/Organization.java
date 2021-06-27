@@ -2,6 +2,8 @@ package com.company.timesheetwitcuba.entity;
 
 import com.haulmont.chile.core.annotations.NamePattern;
 import com.haulmont.cuba.core.entity.StandardEntity;
+import com.haulmont.cuba.core.entity.annotation.OnDelete;
+import com.haulmont.cuba.core.global.DeletePolicy;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -18,6 +20,7 @@ public class Organization extends StandardEntity {
     @Column(name = "NAME")
     private String name;
 
+    @OnDelete(DeletePolicy.CASCADE)
     @OneToMany(mappedBy = "organization")
     private List<Department> department;
 

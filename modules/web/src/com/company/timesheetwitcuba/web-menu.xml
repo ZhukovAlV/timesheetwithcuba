@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <menu-config xmlns="http://schemas.haulmont.com/cuba/menu.xsd">
     <menu id="application-timesheetwithcuba" insertBefore="administration" caption="mainMsg://menu_config.application-timesheetwithcuba">
+        <item screen="timesheetwithcuba_Organization.browse"
+              caption="mainMsg://menu_config.timesheetwithcuba_Organization.browse"/>
+        <item screen="timesheetwithcuba_Department.browse"
+              caption="mainMsg://menu_config.timesheetwithcuba_Department.browse"/>
+        <item screen="timesheetwithcuba_Position.browse"
+              caption="mainMsg://menu_config.timesheetwithcuba_Position.browse"/>
+        <item screen="timesheetwithcuba_User.browse" caption="mainMsg://menu_config.timesheetwithcuba_User.browse"/>
+        <item screen="timesheetwithcuba_Datasheet.browse"
+              caption="mainMsg://menu_config.timesheetwithcuba_Datasheet.browse"/>
     </menu>
 </menu-config>

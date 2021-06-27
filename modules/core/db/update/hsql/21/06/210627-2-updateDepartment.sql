@@ -1,0 +1,1 @@
+alter table TIMESHEETWITHCUBA_DEPARTMENT add column ORGANIZATION_ID varchar(36) ;

@@ -13,24 +13,16 @@ public class Datasheet extends StandardEntity {
     @Column(name = "HOUR_")
     private Integer hour;
 
-    @Column(name = "TYPE_", unique = true)
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "USER_ID")
+    private User user;
+
+    @Column(name = "TYPE_")
     private String type;
 
     @Temporal(TemporalType.DATE)
     @Column(name = "DATE_")
     private Date date;
-
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "USER_ID")
-    private User user;
-
-    public void setType(TypeDay type) {
-        this.type = type == null ? null : type.getId();
-    }
-
-    public TypeDay getType() {
-        return type == null ? null : TypeDay.fromId(type);
-    }
 
     public User getUser() {
         return user;
@@ -38,6 +30,14 @@ public class Datasheet extends StandardEntity {
 
     public void setUser(User user) {
         this.user = user;
+    }
+
+    public void setType(TypeDay type) {
+        this.type = type == null ? null : type.getId();
+    }
+
+    public TypeDay getType() {
+        return type == null ? null : TypeDay.fromId(type);
     }
 
     public Date getDate() {

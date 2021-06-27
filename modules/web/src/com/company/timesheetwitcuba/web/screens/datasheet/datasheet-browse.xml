@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        xmlns:c="http://schemas.haulmont.com/cuba/screen/jpql_condition.xsd"
+        caption="msg://datasheetBrowse.caption"
+        focusComponent="datasheetsTable"
+        messagesPack="com.company.timesheetwitcuba.web.screens.datasheet">
+    <data readOnly="true">
+        <collection id="datasheetsDc"
+                    class="com.company.timesheetwitcuba.entity.Datasheet">
+            <view extends="_local">
+                <property name="user" view="_minimal">
+                    <property name="numberTimesheet"/>
+                    <property name="lastName"/>
+                    <property name="patronymic"/>
+                </property>
+            </view>
+            <loader id="datasheetsDl">
+                <query>
+                    <![CDATA[select e from timesheetwithcuba_Datasheet e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="datasheetsTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="datasheetsTable"
+                dataLoader="datasheetsDl">
+            <properties include=".*"/>
+        </filter>
+        <groupTable id="datasheetsTable"
+                    width="100%"
+                    dataContainer="datasheetsDc"
+                    multiselect="true">
+            <actions>
+                <action id="create" type="create"/>
+                <action id="edit" type="edit"/>
+                <action id="remove" type="remove"/>
+                <action id="excel" type="excel"/>
+            </actions>
+            <columns>
+                <column id="hour"/>
+                <column id="user"/>
+                <column id="type"/>
+                <column id="date"/>
+            </columns>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn" action="datasheetsTable.create"/>
+                <button id="editBtn" action="datasheetsTable.edit"/>
+                <button id="removeBtn" action="datasheetsTable.remove"/>
+                <button id="excelBtn" action="datasheetsTable.excel"/>
+            </buttonsPanel>
+        </groupTable>
+        <hbox id="lookupActions" spacing="true" visible="false">
+            <button action="lookupSelectAction"/>
+            <button action="lookupCancelAction"/>
+        </hbox>
+    </layout>
+</window>
