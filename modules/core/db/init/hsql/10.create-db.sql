@@ -82,6 +82,7 @@ create table TIMESHEETWITHCUBA_USER (
     LAST_NAME varchar(255),
     PATRONYMIC varchar(255),
     POSITION_ID varchar(36),
+    DEPARTMENT_ID varchar(36),
     --
     primary key (ID)
 )^

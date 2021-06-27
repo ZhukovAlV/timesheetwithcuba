@@ -4,6 +4,7 @@ import com.haulmont.chile.core.annotations.NamePattern;
 import com.haulmont.cuba.core.entity.StandardEntity;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Table(name = "TIMESHEETWITHCUBA_DEPARTMENT")
 @Entity(name = "timesheetwithcuba_Department")
@@ -14,9 +15,20 @@ public class Department extends StandardEntity {
     @Column(name = "NAME")
     private String name;
 
+    @OneToMany(mappedBy = "department")
+    private List<User> user;
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ORGANIZATION_ID")
     private Organization organization;
+
+    public List<User> getUser() {
+        return user;
+    }
+
+    public void setUser(List<User> user) {
+        this.user = user;
+    }
 
     public Organization getOrganization() {
         return organization;

@@ -38,6 +38,7 @@
                 <action id="create" type="create"/>
                 <action id="edit" type="edit"/>
                 <action id="remove" type="remove"/>
+                <action id="refresh" type="refresh"/>
                 <action id="excel" type="excel"/>
             </actions>
             <columns>
@@ -52,6 +53,7 @@
                 <button id="createBtn" action="datasheetsTable.create"/>
                 <button id="editBtn" action="datasheetsTable.edit"/>
                 <button id="removeBtn" action="datasheetsTable.remove"/>
+                <button id="refreshBtn" action="datasheetsTable.refresh"/>
                 <button id="excelBtn" action="datasheetsTable.excel"/>
             </buttonsPanel>
         </groupTable>

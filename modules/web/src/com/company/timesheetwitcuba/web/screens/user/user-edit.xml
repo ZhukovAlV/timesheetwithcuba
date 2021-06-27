@@ -8,6 +8,7 @@
                   class="com.company.timesheetwitcuba.entity.User">
             <view extends="_local">
                 <property name="position" view="_minimal"/>
+                <property name="department" view="_minimal"/>
             </view>
             <loader/>
         </instance>
@@ -22,6 +23,12 @@
                 <textField id="lastNameField" property="lastName"/>
                 <textField id="patronymicField" property="patronymic"/>
                 <pickerField id="positionField" property="position">
+                    <actions>
+                        <action id="lookup" type="picker_lookup"/>
+                        <action id="clear" type="picker_clear"/>
+                    </actions>
+                </pickerField>
+                <pickerField id="departmentField" property="department">
                     <actions>
                         <action id="lookup" type="picker_lookup"/>
                         <action id="clear" type="picker_clear"/>
