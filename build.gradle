@@ -37,6 +37,7 @@ cuba {
 dependencies {
     appComponent("com.haulmont.cuba:cuba-global:$cubaVersion")
     appComponent("com.haulmont.reports:reports-global:$cubaVersion")
+    appComponent('br.com.petersonbr.translations:cuba-translations-addon-global:7.2.2')
 }
 
 def hsql = 'org.hsqldb:hsqldb:2.4.1'
