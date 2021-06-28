@@ -32,6 +32,9 @@ cuba {
         version = '0.1'
         isSnapshot = true
     }
+    tomcat {
+        port = '8083'
+    }
 }
 
 dependencies {
@@ -170,3 +173,9 @@ task restart(dependsOn: ['stop', ":${modulePrefix}-core:deploy", ":${modulePrefi
 }
 restart.finalizedBy start
 
+task buildWar(type: CubaWarBuilding) {
+    includeJdbcDriver = true
+    appProperties = ['cuba.automaticDatabaseUpdate': true]
+    logbackConfigurationFile = 'etc/war-logback.xml'
+    singleWar = false
+}
