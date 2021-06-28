@@ -1,5 +1,6 @@
 package com.company.timesheetwitcuba.entity;
 
+import com.haulmont.chile.core.annotations.NamePattern;
 import com.haulmont.cuba.core.entity.StandardEntity;
 
 import javax.persistence.*;
@@ -7,6 +8,7 @@ import java.util.Date;
 
 @Table(name = "TIMESHEETWITHCUBA_DATASHEET")
 @Entity(name = "timesheetwithcuba_Datasheet")
+@NamePattern("%s %s %s|date,hour,type")
 public class Datasheet extends StandardEntity {
     private static final long serialVersionUID = -7348720272376774771L;
 
