@@ -82,6 +82,7 @@ create table TIMESHEETWITHCUBA_USER (
     DELETED_BY varchar(50),
     --
     NUMBER_TIMESHEET integer,
+    FULL_DAY tinyint,
     FIRST_NAME varchar(255),
     LAST_NAME varchar(255),
     PATRONYMIC varchar(255),
