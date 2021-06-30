@@ -1,48 +1,47 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
         xmlns:c="http://schemas.haulmont.com/cuba/screen/jpql_condition.xsd"
-        caption="msg://organizationBrowse.caption"
-        focusComponent="organizationsTable"
-        messagesPack="com.company.timesheetwitcuba.web.screens.organization">
+        caption="msg://holyDayBrowse.caption"
+        focusComponent="holyDaysTable"
+        messagesPack="com.company.timesheetwitcuba.web.screens.holyday">
     <data readOnly="true">
-        <collection id="organizationsDc"
-                    class="com.company.timesheetwitcuba.entity.Organization">
+        <collection id="holyDaysDc"
+                    class="com.company.timesheetwitcuba.entity.HolyDay">
             <view extends="_local"/>
-            <loader id="organizationsDl">
+            <loader id="holyDaysDl">
                 <query>
-                    <![CDATA[select e from timesheetwithcuba_Organization e]]>
+                    <![CDATA[select e from timesheetwithcuba_HolyDay e]]>
                 </query>
             </loader>
         </collection>
     </data>
     <dialogMode height="600"
                 width="800"/>
-    <layout expand="organizationsTable"
+    <layout expand="holyDaysTable"
             spacing="true">
         <filter id="filter"
-                applyTo="organizationsTable"
-                dataLoader="organizationsDl">
+                applyTo="holyDaysTable"
+                dataLoader="holyDaysDl">
             <properties include=".*"/>
         </filter>
-        <groupTable id="organizationsTable"
+        <groupTable id="holyDaysTable"
                     width="100%"
-                    dataContainer="organizationsDc">
+                    dataContainer="holyDaysDc">
             <actions>
                 <action id="create" type="create"/>
                 <action id="edit" type="edit"/>
                 <action id="remove" type="remove"/>
             </actions>
             <columns>
+                <column id="dateDay"/>
                 <column id="name"/>
-                <column id="okud"/>
-                <column id="okpo"/>
             </columns>
             <rowsCount/>
             <buttonsPanel id="buttonsPanel"
                           alwaysVisible="true">
-                <button id="createBtn" action="organizationsTable.create"/>
-                <button id="editBtn" action="organizationsTable.edit"/>
-                <button id="removeBtn" action="organizationsTable.remove"/>
+                <button id="createBtn" action="holyDaysTable.create"/>
+                <button id="editBtn" action="holyDaysTable.edit"/>
+                <button id="removeBtn" action="holyDaysTable.remove"/>
             </buttonsPanel>
         </groupTable>
         <hbox id="lookupActions" spacing="true" visible="false">

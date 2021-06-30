@@ -1,0 +1,2 @@
+alter table TIMESHEETWITHCUBA_ORGANIZATION add OKUD varchar(255) ;
+alter table TIMESHEETWITHCUBA_ORGANIZATION add OKPO varchar(255) ;

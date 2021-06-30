@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
-        caption="msg://organizationEdit.caption"
+        caption="msg://holyDayEdit.caption"
         focusComponent="form"
-        messagesPack="com.company.timesheetwitcuba.web.screens.organization">
+        messagesPack="com.company.timesheetwitcuba.web.screens.holyday">
     <data>
-        <instance id="organizationDc"
-                  class="com.company.timesheetwitcuba.entity.Organization">
+        <instance id="holyDayDc"
+                  class="com.company.timesheetwitcuba.entity.HolyDay">
             <view extends="_local"/>
             <loader/>
         </instance>
@@ -13,11 +13,10 @@
     <dialogMode height="600"
                 width="800"/>
     <layout expand="editActions" spacing="true">
-        <form id="form" dataContainer="organizationDc">
+        <form id="form" dataContainer="holyDayDc">
             <column width="350px">
+                <dateField id="dateDayField" property="dateDay"/>
                 <textField id="nameField" property="name"/>
-                <textField id="okudField" property="okud"/>
-                <textField id="okpoField" property="okpo"/>
             </column>
         </form>
         <hbox id="editActions" spacing="true">

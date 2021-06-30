@@ -9,6 +9,8 @@
                     class="com.company.timesheetwitcuba.entity.Department">
             <view extends="_local">
                 <property name="organization" view="_minimal"/>
+                <property name="boss" view="_minimal"/>
+                <property name="performer" view="_minimal"/>
             </view>
             <loader id="departmentsDl">
                 <query>
@@ -33,10 +35,13 @@
                 <action id="create" type="create"/>
                 <action id="edit" type="edit"/>
                 <action id="remove" type="remove"/>
+                <action id="refresh" type="refresh"/>
             </actions>
             <columns>
                 <column id="name"/>
                 <column id="organization"/>
+                <column id="boss"/>
+                <column id="performer"/>
             </columns>
             <rowsCount/>
             <buttonsPanel id="buttonsPanel"
@@ -44,6 +49,7 @@
                 <button id="createBtn" action="departmentsTable.create"/>
                 <button id="editBtn" action="departmentsTable.edit"/>
                 <button id="removeBtn" action="departmentsTable.remove"/>
+                <button id="refreshBtn" action="departmentsTable.refresh"/>
             </buttonsPanel>
         </groupTable>
         <hbox id="lookupActions" spacing="true" visible="false">

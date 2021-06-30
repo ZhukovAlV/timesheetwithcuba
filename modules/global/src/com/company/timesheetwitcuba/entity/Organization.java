@@ -24,6 +24,28 @@ public class Organization extends StandardEntity {
     @OneToMany(mappedBy = "organization")
     private List<Department> department;
 
+    @Column(name = "OKUD")
+    private String okud;
+
+    @Column(name = "OKPO")
+    private String okpo;
+
+    public String getOkpo() {
+        return okpo;
+    }
+
+    public void setOkpo(String okpo) {
+        this.okpo = okpo;
+    }
+
+    public String getOkud() {
+        return okud;
+    }
+
+    public void setOkud(String okud) {
+        this.okud = okud;
+    }
+
     public List<Department> getDepartment() {
         return department;
     }

@@ -7,5 +7,6 @@
         <class>com.company.timesheetwitcuba.entity.Organization</class>
         <class>com.company.timesheetwitcuba.entity.Department</class>
         <class>com.company.timesheetwitcuba.entity.Datasheet</class>
+        <class>com.company.timesheetwitcuba.entity.HolyDay</class>
     </persistence-unit>
 </persistence>

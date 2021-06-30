@@ -10,5 +10,7 @@
         <item screen="timesheetwithcuba_User.browse" caption="mainMsg://menu_config.timesheetwithcuba_User.browse"/>
         <item screen="timesheetwithcuba_Datasheet.browse"
               caption="mainMsg://menu_config.timesheetwithcuba_Datasheet.browse"/>
+        <item screen="timesheetwithcuba_HolyDay.browse"
+              caption="mainMsg://menu_config.timesheetwithcuba_HolyDay.browse"/>
     </menu>
 </menu-config>
