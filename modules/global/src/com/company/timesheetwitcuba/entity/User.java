@@ -15,6 +15,9 @@ public class User extends StandardEntity {
     @Column(name = "NUMBER_TIMESHEET", unique = true)
     private Integer numberTimesheet;
 
+    @Column(name = "FULL_DAY")
+    private Boolean fullDay;
+
     @Column(name = "FIRST_NAME")
     private String firstName;
 
@@ -34,6 +37,14 @@ public class User extends StandardEntity {
 
     @OneToMany(mappedBy = "user")
     private List<Datasheet> datasheet;
+
+    public Boolean getFullDay() {
+        return fullDay;
+    }
+
+    public void setFullDay(Boolean fullDay) {
+        this.fullDay = fullDay;
+    }
 
     public Department getDepartment() {
         return department;

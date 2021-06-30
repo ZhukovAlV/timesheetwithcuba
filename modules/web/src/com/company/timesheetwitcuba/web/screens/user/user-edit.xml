@@ -19,6 +19,7 @@
         <form id="form" dataContainer="userDc">
             <column width="350px">
                 <textField id="numberTimesheetField" property="numberTimesheet"/>
+                <checkBox id="fullDayField" property="fullDay"/>
                 <textField id="firstNameField" property="firstName"/>
                 <textField id="lastNameField" property="lastName"/>
                 <textField id="patronymicField" property="patronymic"/>
