@@ -18,11 +18,11 @@ public class User extends StandardEntity {
     @Column(name = "FULL_DAY")
     private Boolean fullDay;
 
-    @Column(name = "FIRST_NAME")
-    private String firstName;
-
     @Column(name = "LAST_NAME")
     private String lastName;
+
+    @Column(name = "FIRST_NAME")
+    private String firstName;
 
     @Column(name = "PATRONYMIC")
     private String patronymic;

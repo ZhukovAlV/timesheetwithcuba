@@ -38,8 +38,8 @@
             <columns>
                 <column id="numberTimesheet"/>
                 <column id="fullDay"/>
-                <column id="firstName"/>
                 <column id="lastName"/>
+                <column id="firstName"/>
                 <column id="patronymic"/>
                 <column id="position"/>
                 <column id="department"/>
